@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>SVG Path Converter</title>
+<meta charset="utf-8">
+<meta name="title=" content="SVG Path Converter">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="a simple utility to convert SVG paths">
+<meta name="keywords" content="svg path, convert, converter, relative, absolute, simple, easy, free">
+<!-- <link rel="shortcut icon" href="icon.png"> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.0/snap.svg-min.js" integrity="sha512-7AnEpfEsAvm4k5R2HtRJ/IqENDfiJug3cQHXi7mAa2fXx20lA3ulCvJg/fkYIgEoWfvsiDk60zIbKXqaV6AQUw==" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/scripts.js"></script>
+
+</head>
+<body class="text-center m-5">
+
+	<p class="m-3">SVG Path Converter</p>
+
+	<div class="flex flex-wrap bg-gray-200">
+
+		<div class="md:w-2/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<label>Your path: <textarea id="origPathT" class="p-3 w-full focus:outline-none focus:border-indigo-500 focus:border-4" autofocus>M67.4,131.3h20.8c0,0,21.2,-71.5,-13.3,-96.9c-24.9,29,-7.5,96.9,-7.5,96.9z</textarea></label>
+			</div>
+		</div>
+		<div class="md:w-1/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<svg class="container"><path id="origPath" fill="#fff" d=""/></svg>
+			</div>
+		</div>
+
+		<div class="md:w-2/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<label>Relative path: <textarea id="relPathT" class="p-3 w-full" readonly></textarea></label>
+			</div>
+		</div>
+		<div class="md:w-1/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<svg class="container"><path id="relativePath" fill="#fff" d=""/></svg>
+			</div>
+		</div>
+
+		<div class="md:w-2/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<label>Absolute path: <textarea id="absPathT" class="p-3 w-full" readonly></textarea></label>
+			</div>
+		</div>
+		<div class="md:w-1/3 w-full p-3">
+			<div class="text-gray-700 bg-gray-400 p-3">
+				<svg class="container"><path id="absolutePath" fill="#fff" d=""/></svg>
+			</div>
+		</div>
+
+	</div>
+
+
+	<footer class="text-gray-600">
+		<small>Edited by <a href="https://justingolden.me">Justin Golden</a> from utility created by <a href="http://lea.verou.me">Lea Verou</a> on <a href="https://codepen.io/leaverou/pen/RmwzKv">Codepen</a>, which was based off of <a href="http://jsfiddle.net/MC53K/">this fiddle</a> created by <a href="http://jsfiddle.net/user/heyzeuss/fiddles/">heyzeuss</a>. Conversion logic by <a href="http://snapsvg.io">Snap.svg</a></small>
+	</footer>
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.1 154.1">
+<circle fill="#E6E6E6" cx="77.1" cy="77.1" r="77.1"/>
+<path d="M67.4,131.3h20.8c0,0,21.2,-71.5,-13.3,-96.9c-24.9,29,-7.5,96.9,-7.5,96.9z"/>
+<path d="M37.6,125.7c-22.6,-8.5,-42.3,-49.6,-14.2,-88.2c18.9,24.2,-11.1,19.4,14.2,88.2z"/>
+<path d="M60.4,130.9c-18.5,9.7,-43.6,-59.3,-10.4,-103.6c23.8,27.5,-7.7,44.3,10.4,104.5"/>
+<path d="M95,130.9c18.5,9.7,43.6,-59.3,10.4,-103.6c-23.8,27.4,7.7,44.2,-10.4,104.4"/>
+<path d="M117.8,125.6c22.6,-8.5,42.3,-49.5,14.2,-88.1c-18.9,24.2,11.1,19.4,-14.2,88.1z"/>
+</svg> -->
+
+</body>
+</html>
